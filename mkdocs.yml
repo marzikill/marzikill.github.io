@@ -1,0 +1,86 @@
+site_name: Lycée Lucie AUBRAC
+
+nav:
+  - 'Lycée': 'index.md'
+  - 'Intendance': 'intendance.md'
+  - 'ATRIUM': 'atrium.md'
+  - 'JPO - Visite virtuelle': 'visite.md'
+  - 'Enseignements':
+    - 'CDI': 'ens/cdi.md'
+    - 'Allemand': 'ens/allemand.md'
+    - 'Anglais': 'ens/anglais.md'
+    - 'Arts plastiques': 'ens/arts-pla.md'
+    - 'ÉPS': 'ens/eps.md'
+    - 'Espagnol': 'ens/espagnol.md'
+    - 'Français': 'ens/français.md'
+    - 'Histoire, Géographie, Éducation civique': 'ens/hist.md'
+    - 'Informatique': 'ens/info.md'
+    - 'Italien': 'ens/italien.md'
+    - 'Latin': 'ens/latin.md'
+    - 'Mathématiques': 'ens/maths.md'
+    - 'Physique, Chimie': 'ens/physique.md'
+    - 'SÉS': 'ens/ses.md'
+    - 'STMG': 'ens/stmg.md'
+    - 'SVT': 'ens/svt.md'
+  - 'Section EURO': 'section_euro.md'
+  - 'Mentions légales': 'légal.md'
+
+
+theme:
+  name: material
+  font: false
+  language: fr
+  features:
+    - navigation.instant
+    - navigation.tabs
+    - navigation.expand
+    - navigation.top
+    - toc.integrate
+    - header.autohide
+
+  palette:
+    # Light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Mode sombre
+
+    # Dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: blue
+      accent: blue
+      toggle:
+        icon: material/toggle-switch
+        name: Mode clair
+
+
+markdown_extensions:
+  - abbr
+  - def_list
+  - pymdownx.caret
+  - pymdownx.mark
+  - pymdownx.tilde
+  - pymdownx.snippets
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - toc:
+      permalink: ⚓︎
+      toc_depth: 3
+
+
+plugins:
+  - search
+
+extra:
+  social:
+    - icon: fontawesome/solid/paper-plane
+      link: mailto:ce.0841093g@ac-aix-marseille.fr
+      name: Écrire au lycée
+    - icon: octicons/mortar-board-24
+      link: https://www.atrium-sud.fr/
+      name: ATRIUM
