@@ -37,15 +37,31 @@ theme:
 
 
 markdown_extensions:
+  - meta
   - abbr
   - def_list
+  - attr_list
+  - footnotes
   - pymdownx.caret
   - pymdownx.mark
   - pymdownx.tilde
   - pymdownx.snippets
+  - pymdownx.details
+  - pymdownx.highlight:
+      linenums: true
+  - pymdownx.tasklist:
+      custom_checkbox: false
+  - pymdownx.inlinehilite
+  - pymdownx.superfences
+  - pymdownx.keys
+  - pymdownx.tabbed
+  - pymdownx.betterem:
+      smart_enable: all
   - pymdownx.emoji:
       emoji_index: !!python/name:materialx.emoji.twemoji
       emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.arithmatex:
+      generic: true
   - toc:
       permalink: ⚓︎
       toc_depth: 3
@@ -53,9 +69,15 @@ markdown_extensions:
 
 plugins:
   - search
+  - macros
 
 extra:
   social:
     - icon: fontawesome/solid/paper-plane
       link: mailto:franck.chambon@ac-aix-marseille.fr
       name: Écrire à l'auteur
+
+extra_javascript:
+  - javascripts/config.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
