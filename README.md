@@ -1,0 +1,3 @@
+# Énumeration
+
+Algorithmes de dénombrement post-BAC, à destination des enseignants en mathématiques du secondaire, des étudiants...
