@@ -1,29 +1,7 @@
-site_name: Lycée Lucie AUBRAC
+site_name: Énumération
 
 nav:
-  - 'Lycée': 'index.md'
-  - 'Intendance': 'intendance.md'
-  - 'ATRIUM': 'atrium.md'
-  - 'JPO - Visite virtuelle': 'visite.md'
-  - 'Enseignements':
-    - 'CDI': 'ens/cdi.md'
-    - 'Allemand': 'ens/allemand.md'
-    - 'Anglais': 'ens/anglais.md'
-    - 'Arts plastiques': 'ens/arts-pla.md'
-    - 'ÉPS': 'ens/eps.md'
-    - 'Espagnol': 'ens/espagnol.md'
-    - 'Français': 'ens/français.md'
-    - 'Histoire, Géographie, Éducation civique': 'ens/hist.md'
-    - 'Informatique': 'ens/info.md'
-    - 'Italien': 'ens/italien.md'
-    - 'Latin': 'ens/latin.md'
-    - 'Mathématiques': 'ens/maths.md'
-    - 'Physique, Chimie': 'ens/physique.md'
-    - 'SÉS': 'ens/ses.md'
-    - 'STMG': 'ens/stmg.md'
-    - 'SVT': 'ens/svt.md'
-  - 'Section EURO': 'section_euro.md'
-  - 'Mentions légales': 'légal.md'
+  - 'Énumération': 'index.md'
 
 
 theme:
@@ -79,8 +57,5 @@ plugins:
 extra:
   social:
     - icon: fontawesome/solid/paper-plane
-      link: mailto:ce.0841093g@ac-aix-marseille.fr
-      name: Écrire au lycée
-    - icon: octicons/mortar-board-24
-      link: https://www.atrium-sud.fr/
-      name: ATRIUM
+      link: mailto:franck.chambon@ac-aix-marseille.fr
+      name: Écrire à l'auteur
