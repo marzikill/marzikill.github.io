@@ -8,7 +8,7 @@ Auteur : Franck CHAMBON
 
 ## Problème original
 
-![Triangles avec n=6](triangles.svg){ align=left }
+![Triangles avec n=6](figures/triangles.svg){ align=left }
 
 Un triangle est construit avec des petits triangles.  
 Tous les triangles sont équilatéraux et identiques.  
@@ -26,7 +26,7 @@ On compte tous les triangles équilatéraux dessinés.
         Réponse: $5$. Il y a $3$ petits et un grand tête en haut, un autre tête en bas.
 
     === "Pour $n=3$"
-        Il y en a $9+3$.
+        Il y en a $10+3$.
 
     === "Cas général"
         À vous de trouver !
@@ -63,23 +63,11 @@ On compte tous les rectangles dessinés.
 
 ### Résolution par force brute
 
-!!! warning
-    Mettre une console Basthon
+{{ config.site_url }}{{ page.url }}examples/R_brute.py
 
-```python
-def R_brute(n, m):
-    """Renvoie de nombre de rectangles dessinés dans une grille n×m
-    Force brute : complexité n²×m²
-    """
-    cpt = 0
-    for A_i in range(n+1):
-        for A_j in range(m+1):
-            for B_i in range(n+1):
-                for B_j in range(m+1):
-                    if (A_i < B_i) and (A_j < B_j):
-                        cpt += 1
-    return cpt
-```
+
+<iframe src="https://console.basthon.fr/?from={{ config.site_url }}{{ page.url }}examples/R_brute.py" width="1000" height="500"></iframe>
+
 
 Pour un rectangle, on considère $A$ le coin supérieur gauche, et $B$ l'inférieur droit.
 
@@ -386,7 +374,7 @@ La formule 2 est très efficace, elle ne fait aucune division.
 
 ### Triangles et hexagone convexe
 
-![Hexagone](hexagone_convexe.svg)
+![Hexagone](figures/hexagone_convexe.svg)
 
 [Combien y a-t-il de triangles sur cette figure ?](#){ .md-button }
 
@@ -403,7 +391,7 @@ Lien pour tester votre réponse : [Counting Triangles II](http://www.spoj.com/pr
 
 ### Triangles et hexagone étoilé
 
-![Hexagone étoilé](hexagone_étoilé.svg)
+![Hexagone étoilé](figures/hexagone_étoilé.svg)
 
 [Combien y a-t-il de triangles sur cette figure ?](#){ .md-button }
 
