@@ -98,7 +98,9 @@ On a aussi, avec une récurrence sur $m$, et un peu de travail :
 
 On peut alors vérifier :
 
-{{ basthon(py/R_semi_brute, 800) }}
+{{ io_url }}{{ page.url }}scripts/R_semi_brute.py
+
+{{ basthon('scripts/R_semi_brute.py', 800) }}
 
 
 Quand ce programme s'exécute sans message d'erreur, les tests sont validés.
@@ -303,7 +305,7 @@ Une telle formule se prête bien aussi à une méthode d'évaluation proche de c
 !!! warning "Attention"
     Un exercice est inclus dans le script ci-dessous.
 
-{{ basthon(py/R_efficace, 800) }}
+basthon('py/R_efficace', 800) }}
 
 La formule 2 est très efficace, elle ne fait aucune division.
 
