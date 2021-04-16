@@ -41,7 +41,7 @@ Quand un problème semble difficile, on en invente un qui y ressemble, en plus s
 
 ## Problème simplifié
 
-![Rectangles avec n=6 et m=10](figures/rectangles.svg){ align=left width=400 }
+![Rectangles avec n=6 et m=10](triangles/figures/rectangles.svg){ align=left width=400 }
 
 Avec une grille rectangulaire à côtés entiers : $n$ par $m$.
 
@@ -67,7 +67,7 @@ On compte tous les rectangles dessinés.
 
 ### Résolution par force brute
 
-{{ script('python', 'R_brute.py') }}
+{{ script('python', 'scripts/R_brute.py') }}
 
 
 ```
@@ -307,7 +307,7 @@ Une telle formule se prête bien aussi à une méthode d'évaluation proche de c
 !!! warning "Attention"
     Un exercice est inclus dans le script ci-dessous.
 
-{{ basthon('scripts/R_efficace', 800) }}
+{{ basthon('scripts/R_efficace.py', 800) }}
 
 La formule 2 est très efficace, elle ne fait aucune division.
 
@@ -315,7 +315,7 @@ La formule 2 est très efficace, elle ne fait aucune division.
 
 ### Triangles et hexagone convexe
 
-![Hexagone](figures/hexagone_convexe.svg)
+![Hexagone](triangles/figures/hexagone_convexe.svg)
 
 [Combien y a-t-il de triangles sur cette figure ?](#){ .md-button }
 
@@ -332,13 +332,13 @@ Lien pour tester votre réponse : [Counting Triangles II](http://www.spoj.com/pr
 
 ### Triangles et hexagone étoilé
 
-![Hexagone étoilé](figures/hexagone_étoilé.svg)
+![Hexagone étoilé](triangles/figures/hexagone_étoilé.svg)
 
 [Combien y a-t-il de triangles sur cette figure ?](#){ .md-button }
 
 On compte tous les triangles équilatéraux dessinés.
 
-??? "tip" Indices
+??? tip "Indices"
     === "Pour $n=1$"
         Il y en a $12+6+2$.
 
@@ -347,8 +347,3 @@ On compte tous les triangles équilatéraux dessinés.
 
 Lien pour tester votre réponse : [Counting Triangles III](http://www.spoj.com/problems/TCOUNT3/).
 
-
-
-## tests macro
-
-{{ macros_info() }}
