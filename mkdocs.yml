@@ -2,6 +2,7 @@ site_name: Énumération
 
 nav:
   - 'Énumération': 'index.md'
+  - 'nb triangles': '1.Compte_triangles/index.md'
 
 
 theme:
@@ -39,6 +40,7 @@ theme:
 markdown_extensions:
   - meta
   - abbr
+  - admonition
   - def_list
   - attr_list
   - footnotes

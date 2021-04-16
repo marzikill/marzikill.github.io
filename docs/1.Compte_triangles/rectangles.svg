@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+     width="300" height="200" viewBox="-150.0 -100.0 300 200">
+<defs>
+</defs>
+<path d="M-125,75 L125,75" stroke="black" />
+<path d="M-125,50 L125,50" stroke="black" />
+<path d="M-125,25 L125,25" stroke="black" />
+<path d="M-125,0 L125,0" stroke="black" />
+<path d="M-125,-25 L125,-25" stroke="black" />
+<path d="M-125,-50 L125,-50" stroke="black" />
+<path d="M-125,-75 L125,-75" stroke="black" />
+<path d="M-125,75 L-125,-75" stroke="black" />
+<path d="M-100,75 L-100,-75" stroke="black" />
+<path d="M-75,75 L-75,-75" stroke="black" />
+<path d="M-50,75 L-50,-75" stroke="black" />
+<path d="M-25,75 L-25,-75" stroke="black" />
+<path d="M0,75 L0,-75" stroke="black" />
+<path d="M25,75 L25,-75" stroke="black" />
+<path d="M50,75 L50,-75" stroke="black" />
+<path d="M75,75 L75,-75" stroke="black" />
+<path d="M100,75 L100,-75" stroke="black" />
+<path d="M125,75 L125,-75" stroke="black" />
+<text x="-90" y="100" font-size="12" dy="0em">Exemple avec n = 6 et m = 10</text>
+</svg>
