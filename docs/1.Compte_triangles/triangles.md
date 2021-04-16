@@ -62,7 +62,15 @@ On compte tous les rectangles dessinés.
 
 ### Résolution par force brute
 
-<iframe src="https://console.basthon.fr/?from={{ io_url }}{{ page.url }}examples/R_brute.py" width="2500" height="600"></iframe>
+```python
+--8<--- "docs/1.Compte_triangles/triangles/R_brute.py"
+```
+
+```
+>>> R_brute(6, 10)
+1155
+```
+
 
 Pour un rectangle, on considère $A$ le coin supérieur gauche, et $B$ l'inférieur droit.
 
@@ -90,7 +98,9 @@ On a aussi, avec une récurrence sur $m$, et un peu de travail :
 
 On peut alors vérifier :
 
-<iframe src="https://console.basthon.fr/?from={{ io_url }}{{ page.url }}examples/R_semi_brute.py" width="2500" height="800"></iframe>
+{{ io_url }}{{ page.url }}/R_semi_brute.py
+
+<iframe src="https://console.basthon.fr/?from={{ io_url }}{{ page.url }}/R_semi_brute.py" width="2500" height="800"></iframe>
 
 
 
@@ -285,53 +295,15 @@ On peut la réécrire aussi en termes de [*rising factorials*](https://en.wikipe
 
 > $a_n = \dfrac{2n^{\overline3} - n^{\overline2} - n^{\overline1} - 2\cdot\chi_\text{impair}(n)}{8}$
 
-!!! warning
-    $n^{\overline3} = n(n+1)(n+2)$
+!!! warning "Attention"
+    Bien saisir la définition des *rising factorials*, avec par exemple :
+
+$$n^{\overline3} = n(n+1)(n+2)$$
 
 Une telle formule se prête bien aussi à une méthode d'évaluation proche de celle [Ruffini-Horner](https://fr.wikipedia.org/wiki/M%C3%A9thode_de_Ruffini-Horner).
 
 
-!!! warning
-    Proposer un Basthon pour améliorer comb(n, 2 et 3) et ne plus utiliser factorial.
-
-```python
-from math import factorial as f
-
-def comb(n, k):
-    "Renvoie le nombre de combinaisons de k choix parmi n"
-    if 0 <= k <= n:
-        return f(n) // f(k) // f(n-k)
-    else:
-        return 0
-
-def formule1(n):
-    "Calcul rapide"
-    return (12*comb(n+2, 3) - 2*comb(n+1, 2) - comb(n, 1) - (n&1)) // 8
-
-# Tests 1
-for n in range(10):
-        assert formule1(n) == force_brute(n), f"Échec avec n = {n}"
-
-
-def formule2(n):
-    "Calcul très efficace !!!"
-    rising = n
-    ans = -rising - (n&1)
-
-    n += 1
-    rising *= n
-    ans -= rising
-    
-    n +=1
-    rising *= n
-    ans += rising << 1
-    
-    return ans >> 3
-
-# Tests 2
-for n in range(100):
-        assert formule1(n) == formule2(n), f"Échec avec n = {n}"
-```
+<iframe src="https://console.basthon.fr/?from={{ io_url }}{{ page.url }}/R_efficace.py" width="2500" height="800"></iframe>
 
 La formule 2 est très efficace, elle ne fait aucune division.
 
