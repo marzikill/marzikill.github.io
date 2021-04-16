@@ -4,7 +4,7 @@ Auteur : Franck CHAMBON
 
 !!! info
     cette figure est créée avec `ipythonblocs`, et le code HTML est ici inclus :sunglasses:  
-    Et bientôt avec une macro, sans passer par un fichier temporaire.
+    Bientôt avec une macro, **sans** passer par un fichier temporaire.
 
 {{ html_fig(1) }}
 
