@@ -8,6 +8,7 @@ pages:
     - pip install mkdocs-macros-plugin
     - pip install termtosvg
     - pip install drawSvg
+    - pip install ipythonblocks
     - mkdocs build --site-dir public
   artifacts:
     paths:

@@ -1,7 +1,3 @@
----
-author: Franck CHAMBON
----
-
 # Compter le nombre de triangles dans une figure
 
 Auteur : Franck CHAMBON
@@ -20,7 +16,6 @@ On compte tous les triangles équilatéraux dessinés.
 
 ??? info "Indices"
     === "Pour $n=1$"
-        ![Cas $n=1$](figures/triangles.svg){: style="height:50px;width:50px"}
         Il y en a $1$.
 
     === "Pour $n=2$"
@@ -59,23 +54,15 @@ On compte tous les rectangles dessinés.
     === "Pour $n=2$ et $m=2$"
         Réponse $9$.
 
+    === "Pour $n=6$ et $m=10$"
+        Réponse $1155$.
+
     === "Cas général"
         À vous de trouver !
 
 ### Résolution par force brute
 
-{{ io_url }}{{ page.url }}examples/R_brute.py
-
-{{ raw_url }}{{ page.url }}examples/R_brute.py
-
-
-
 <iframe src="https://console.basthon.fr/?from={{ io_url }}{{ page.url }}examples/R_brute.py" width="2500" height="600"></iframe>
-
-autre désiré : https://ens-fr.gitlab.io/enumeration/1.Compte_triangles/examples/R_brute.py
-
-<iframe src="https://console.basthon.fr/?from={{ raw_url }}{{ page.url }}examples/R_brute.py" width="2500" height="600"></iframe>
-
 
 Pour un rectangle, on considère $A$ le coin supérieur gauche, et $B$ l'inférieur droit.
 
@@ -103,40 +90,9 @@ On a aussi, avec une récurrence sur $m$, et un peu de travail :
 
 On peut alors vérifier :
 
-```python
-def comb_2(n):
-    "Renvoie le coefficient binomial (n, 2)"
-    return n * (n-1) // 2
-
-def R_brute(n, m):
-    """Renvoie de nombre de rectangles dessinés dans une grille n×m
-    Force brute : complexité n²×m²
-    """
-    cpt = 0
-    for A_i in range(n+1):
-        for A_j in range(m+1):
-            for B_i in range(n+1):
-                for B_j in range(m+1):
-                    if (A_i < B_i) and (A_j < B_j):
-                        cpt += 1
-    return cpt
-
-def R_semi_brute(n, m):
-    # À compléter
-    return ...
-
-def R(n, m):
-    """Renvoie de nombre de rectangles dessinés dans une grille n×m
-    Formule combinatoire : coût constant (pour n et m de taille raisonnable)
-    """
-    return comb_2(n+1) * comb_2(m+1)
+<iframe src="https://console.basthon.fr/?from={{ io_url }}{{ page.url }}examples/R_semi_brute.py" width="2500" height="800"></iframe>
 
 
-# tests
-for n in range(10):
-    for m in range(10):
-        assert R(n, m) == R_semi_brute(n, m) == R_brute(n, m)
-```
 
 Quand ce programme s'exécute sans message d'erreur, les tests sont validés.
 
@@ -295,8 +251,8 @@ On peut parfois calculer par `force_brute` les premiers résultats d'un problèm
 La [recherche](https://oeis.org/search?q=0,+1,+5,+13,+27,+48,+78,+118,+170,+235&language=french&go=Search) avec les premiers termes donne :
 
 >
->Chercher: **seq:0,1,5,13,27,48,78,118,170,235**
->Displaying 1-1 of 1 result found. 
+>Chercher: **seq:0,1,5,13,27,48,78,118,170,235**  
+>Displaying 1-1 of 1 result found.  
 >[A002717](https://oeis.org/A002717) a(n) = floor(n(n+2)(2n+1)/8).
 
 Puis des détails sur la seule suite concordante, d'indice d'entrée A002717.
@@ -329,7 +285,8 @@ On peut la réécrire aussi en termes de [*rising factorials*](https://en.wikipe
 
 > $a_n = \dfrac{2n^{\overline3} - n^{\overline2} - n^{\overline1} - 2\cdot\chi_\text{impair}(n)}{8}$
 
-Attention, $n^{\overline3} = n(n+1)(n+2)$
+!!! warning
+    $n^{\overline3} = n(n+1)(n+2)$
 
 Une telle formule se prête bien aussi à une méthode d'évaluation proche de celle [Ruffini-Horner](https://fr.wikipedia.org/wiki/M%C3%A9thode_de_Ruffini-Horner).
 

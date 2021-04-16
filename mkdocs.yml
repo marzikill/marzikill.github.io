@@ -2,8 +2,8 @@ site_name: Énumération
 
 nav:
   - 'Énumération': 'index.md'
-  - 'nb triangles': '1.Compte_triangles/index.md'
-
+  - 'nb triangles': '1.Compte_triangles/triangles.md'
+  - 'nb pavages': '2.Pavages/pavages.md'
 
 theme:
   name: material
