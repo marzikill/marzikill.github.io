@@ -10,7 +10,7 @@ Un triangle est construit avec des petits triangles.
 Tous les triangles sont équilatéraux et identiques.  
 Il y en a $n$ sur chaque côté.
 
-[Combien y a-t-il de triangles sur cette figure ?](#){ .md-button }
+[Combien y a-t-il de triangles sur cette figure ?](#réponses){ .md-button }
 
 On compte tous les triangles équilatéraux dessinés.
 
@@ -31,7 +31,7 @@ On compte tous les triangles équilatéraux dessinés.
 
 Quand un problème semble difficile, on en invente un qui y ressemble, en plus simple. Et on essaie de le résoudre. Nous commencerons ainsi.
 
-!!! Abstract
+!!! Abstract "En résumé"
     Ce problème sera ensuite résolu de manière progressive, et c'est l'occasion d'utiliser :
 
     - des méthodes par force brute ;
@@ -47,7 +47,7 @@ Avec une grille rectangulaire à côtés entiers : $n$ par $m$.
 
 On compte le nombre de rectangles dessinés, que l'on note $R_{n, m}$.
 
-[Combien y a-t-il de rectangles sur cette figure ?](#){ .md-button }
+[Combien y a-t-il de rectangles sur cette figure ?](#réponses){ .md-button }
 
 On compte tous les rectangles dessinés.  
 
@@ -317,7 +317,7 @@ La formule 2 est très efficace, elle ne fait aucune division.
 
 ![Hexagone](figures/hexagone_convexe.svg)
 
-[Combien y a-t-il de triangles sur cette figure ?](#){ .md-button }
+[Combien y a-t-il de triangles sur cette figure ?](#réponses){ .md-button }
 
 On compte tous les triangles équilatéraux dessinés.
 
@@ -334,7 +334,7 @@ Lien pour tester votre réponse : [Counting Triangles II](http://www.spoj.com/pr
 
 ![Hexagone étoilé](figures/hexagone_étoilé.svg)
 
-[Combien y a-t-il de triangles sur cette figure ?](#){ .md-button }
+[Combien y a-t-il de triangles sur cette figure ?](#réponses){ .md-button }
 
 On compte tous les triangles équilatéraux dessinés.
 
@@ -346,4 +346,22 @@ On compte tous les triangles équilatéraux dessinés.
         À vous de trouver !
 
 Lien pour tester votre réponse : [Counting Triangles III](http://www.spoj.com/problems/TCOUNT3/).
+
+## Réponses aux problèmes <a name="réponses"></a>
+
+??? done "Réponses"
+    === "_Problème_"
+        Vous pouvez obtenir la réponse, mais avez-vous bien cherché avant ?
+
+    === "Triangle ; $n=6$"
+        Il y a $78$ triangles.
+
+    === "Rectangle ; $n=6$ et $m=10$"
+        Il y a $1155$ rectangles.
+    
+    === "Hexagone ; $n=5$"
+        Il y a $496$ triangles.
+
+    === "Hexagone étoilé ; $n=3$"
+        Il y a $354$ triangles.
 
