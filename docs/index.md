@@ -6,4 +6,5 @@
 - Les méthodes avancées nécessitent des connaissances en algèbre linéaire ou en arithmétique, et sont destinées au public d'enseignants de mathématiques, ou d'étudiants.
 
 
-test +
+{{ macros_info() }}
+

@@ -20,6 +20,7 @@ On compte tous les triangles équilatéraux dessinés.
 
 ??? info "Indices"
     === "Pour $n=1$"
+        ![Cas $n=1$](figures/triangles.svg){: style="height:50px;width:50px"}
         Il y en a $1$.
 
     === "Pour $n=2$"
@@ -75,7 +76,7 @@ désiré : https://ens-fr.gitlab.io/enumeration/1.Compte_triangles/examples/R_br
 
 {{ macros_info }}
 
-<iframe src="https://console.basthon.fr/?from=https://ens-fr.gitlab.io/enumeration/1.Compte_triangles/examples/R_brute.py" width="1000" height="500"></iframe>
+<iframe src="https://console.basthon.fr/?from=https://ens-fr.gitlab.io/enumeration/1.Compte_triangles/examples/R_brute.py" width="2500" height="600"></iframe>
 
 
 Pour un rectangle, on considère $A$ le coin supérieur gauche, et $B$ l'inférieur droit.
