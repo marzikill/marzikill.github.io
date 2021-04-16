@@ -4,7 +4,7 @@ Auteur : Franck CHAMBON
 
 ## Problème original
 
-![Triangles avec n=6](figures/triangles.svg){ align=left }
+![Triangles avec n=6](triangles/figures/triangles.svg){ align=left width=270 }
 
 Un triangle est construit avec des petits triangles.  
 Tous les triangles sont équilatéraux et identiques.  
@@ -27,16 +27,17 @@ On compte tous les triangles équilatéraux dessinés.
     === "Cas général"
         À vous de trouver !
 
-Ce problème sera résolu de manière progressive, et c'est l'occasion d'utiliser :
+!!! Abstract "Au programme"
+    Ce problème sera résolu de manière progressive, et c'est l'occasion d'utiliser :
 
-- des méthodes par force brute ;
-- des méthodes par récurrence ;
-- des méthodes avec les coefficients binomiaux.
+    - des méthodes par force brute ;
+    - des méthodes par récurrence ;
+    - des méthodes avec les coefficients binomiaux.
 
 
 ## Problème simplifié
 
-![Rectangles avec n=6 et m=10](figures/rectangles.svg){ align=left }
+![Rectangles avec n=6 et m=10](figures/rectangles.svg){ align=left width=400 }
 
 Avec une grille rectangulaire à côtés entiers : $n$ par $m$.
 
@@ -62,9 +63,8 @@ On compte tous les rectangles dessinés.
 
 ### Résolution par force brute
 
-```python
---8<--- "docs/1.Compte_triangles/py/R_brute.py"
-```
+{{ script('python', 'R_brute.py') }}
+
 
 ```
 >>> R_brute(6, 10)
@@ -305,7 +305,7 @@ Une telle formule se prête bien aussi à une méthode d'évaluation proche de c
 !!! warning "Attention"
     Un exercice est inclus dans le script ci-dessous.
 
-basthon('py/R_efficace', 800) }}
+{{ basthon('scripts/R_efficace', 800) }}
 
 La formule 2 est très efficace, elle ne fait aucune division.
 
@@ -344,3 +344,9 @@ On compte tous les triangles équilatéraux dessinés.
         À vous de trouver !
 
 Lien pour tester votre réponse : [Counting Triangles III](http://www.spoj.com/problems/TCOUNT3/).
+
+
+
+## tests macro
+
+{{ macros_info() }}
