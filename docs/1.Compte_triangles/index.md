@@ -64,19 +64,17 @@ On compte tous les rectangles dessinés.
 
 ### Résolution par force brute
 
-{{ config.site_url }}
+{{ io_url }}{{ page.url }}examples/R_brute.py
 
-{{ page.url }}
+{{ raw_url }}{{ page.url }}examples/R_brute.py
 
-{{ page.canonical_url }}
 
-examples/R_brute.py
 
-désiré : https://ens-fr.gitlab.io/enumeration/1.Compte_triangles/examples/R_brute.py
+<iframe src="https://console.basthon.fr/?from={{ io_url }}{{ page.url }}examples/R_brute.py" width="2500" height="600"></iframe>
 
-{{ macros_info }}
+autre désiré : https://ens-fr.gitlab.io/enumeration/1.Compte_triangles/examples/R_brute.py
 
-<iframe src="https://console.basthon.fr/?from=https://ens-fr.gitlab.io/enumeration/1.Compte_triangles/examples/R_brute.py" width="2500" height="600"></iframe>
+<iframe src="https://console.basthon.fr/?from={{ raw_url }}{{ page.url }}examples/R_brute.py" width="2500" height="600"></iframe>
 
 
 Pour un rectangle, on considère $A$ le coin supérieur gauche, et $B$ l'inférieur droit.

@@ -78,6 +78,8 @@ extra:
     - icon: fontawesome/solid/paper-plane
       link: mailto:franck.chambon@ac-aix-marseille.fr
       name: Écrire à l'auteur
+  raw_url: https://gitlab.com/ens-fr/enumeration/-/raw/master/docs/
+  io_url: https://ens-fr.gitlab.io/enumeration/
 
 extra_javascript:
   - javascripts/config.js
