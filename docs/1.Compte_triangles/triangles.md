@@ -98,7 +98,7 @@ On a aussi, avec une récurrence sur $m$, et un peu de travail :
 
 On peut alors vérifier :
 
-{{ io_url }}{{ page.url }}scripts/R_semi_brute.py
+{{ io_url }}{{ page.url }}../scripts/R_semi_brute.py
 
 {{ basthon('scripts/R_semi_brute.py', 800) }}
 
