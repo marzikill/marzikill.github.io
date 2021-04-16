@@ -63,7 +63,7 @@ On compte tous les rectangles dessinés.
 ### Résolution par force brute
 
 ```python
---8<--- "docs/1.Compte_triangles/triangles/R_brute.py"
+--8<--- "docs/1.Compte_triangles/py/R_brute.py"
 ```
 
 ```
@@ -98,8 +98,7 @@ On a aussi, avec une récurrence sur $m$, et un peu de travail :
 
 On peut alors vérifier :
 
-<iframe src="https://console.basthon.fr/?from={{ io_url }}{{ page.url }}/R_semi_brute.py" width="2500" height="800"></iframe>
-
+{{ basthon(py/R_semi_brute, 800) }}
 
 
 Quand ce programme s'exécute sans message d'erreur, les tests sont validés.
@@ -263,7 +262,7 @@ La [recherche](https://oeis.org/search?q=0,+1,+5,+13,+27,+48,+78,+118,+170,+235&
 >Displaying 1-1 of 1 result found.  
 >[A002717](https://oeis.org/A002717) a(n) = floor(n(n+2)(2n+1)/8).
 
-Puis des détails sur la seule suite concordante, d'indice d'entrée A002717.
+Puis des détails sur la seule suite concordante, d'indice d'entrée `A002717`.
 
 ### Une nouvelle formule
 
@@ -304,7 +303,7 @@ Une telle formule se prête bien aussi à une méthode d'évaluation proche de c
 !!! warning "Attention"
     Un exercice est inclus dans le script ci-dessous.
 
-<iframe src="https://console.basthon.fr/?from={{ io_url }}{{ page.url }}/R_efficace.py" width="2500" height="800"></iframe>
+{{ basthon(py/R_efficace, 800) }}
 
 La formule 2 est très efficace, elle ne fait aucune division.
 
