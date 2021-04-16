@@ -14,7 +14,7 @@ Il y en a $n$ sur chaque côté.
 
 On compte tous les triangles équilatéraux dessinés.
 
-??? info "Indices"
+??? tip "Indices"
     === "Pour $n=1$"
         Il y en a $1$.
 
@@ -47,7 +47,7 @@ On compte le nombre de rectangles dessinés, que l'on note $R_{n, m}$.
 On compte tous les rectangles dessinés.  
 
 
-??? Indices
+??? tip "Indices"
     === "Pour $n=1$ et $m=1$"
         Il y en a $1$.
 
@@ -92,13 +92,11 @@ On a aussi, avec une récurrence sur $m$, et un peu de travail :
 - $\forall n, m \in \mathbb N^* : R_{n, m} = \binom{n+1}2 \binom{m+1}2$
 
 
-!!! warning
-    Proposer aussi un Basthon avec programmer la boucle semi force brute.
+!!! warning "Attention"
+    Un exercice est inclus dans le script ci-dessous.
 
 
 On peut alors vérifier :
-
-{{ io_url }}{{ page.url }}/R_semi_brute.py
 
 <iframe src="https://console.basthon.fr/?from={{ io_url }}{{ page.url }}/R_semi_brute.py" width="2500" height="800"></iframe>
 
@@ -165,7 +163,7 @@ En dehors de la *docstring*, les différences sont :
 
 #### Avec une liste en compréhension
 
-> Cette technique est au programme en spécialité mathématiques en classe de première. **Cependant**, nous le faisons ici avec une double boucle, ce qui n'est pas au programme...
+> Cette technique est au programme en spécialité Mathématiques en classe de première. **Cependant**, nous le faisons ici avec une double boucle, ce qui n'est pas au programme...
 
 ```python
 def lst_triangle(n):
@@ -303,6 +301,9 @@ $$n^{\overline3} = n(n+1)(n+2)$$
 Une telle formule se prête bien aussi à une méthode d'évaluation proche de celle [Ruffini-Horner](https://fr.wikipedia.org/wiki/M%C3%A9thode_de_Ruffini-Horner).
 
 
+!!! warning "Attention"
+    Un exercice est inclus dans le script ci-dessous.
+
 <iframe src="https://console.basthon.fr/?from={{ io_url }}{{ page.url }}/R_efficace.py" width="2500" height="800"></iframe>
 
 La formule 2 est très efficace, elle ne fait aucune division.
@@ -317,7 +318,7 @@ La formule 2 est très efficace, elle ne fait aucune division.
 
 On compte tous les triangles équilatéraux dessinés.
 
-??? Indices
+??? tip "Indices"
     === "Pour $n=1$"
         Il y en a $6$.
 
@@ -334,7 +335,7 @@ Lien pour tester votre réponse : [Counting Triangles II](http://www.spoj.com/pr
 
 On compte tous les triangles équilatéraux dessinés.
 
-??? Indices
+??? "tip" Indices
     === "Pour $n=1$"
         Il y en a $12+6+2$.
 
