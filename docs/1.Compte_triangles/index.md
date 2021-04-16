@@ -40,7 +40,7 @@ Ce problème sera résolu de manière progressive, et c'est l'occasion d'utilise
 
 ## Problème simplifié
 
-![Rectangles avec n=6 et m=10](rectangles.svg){ align=left }
+![Rectangles avec n=6 et m=10](figures/rectangles.svg){ align=left }
 
 Avec une grille rectangulaire à côtés entiers : $n$ par $m$.
 
@@ -63,10 +63,19 @@ On compte tous les rectangles dessinés.
 
 ### Résolution par force brute
 
-{{ config.site_url }}{{ page.url }}examples/R_brute.py
+{{ config.site_url }}
 
+{{ page.url }}
 
-<iframe src="https://console.basthon.fr/?from={{ config.site_url }}{{ page.url }}examples/R_brute.py" width="1000" height="500"></iframe>
+{{ page.canonical_url }}
+
+examples/R_brute.py
+
+désiré : https://ens-fr.gitlab.io/enumeration/1.Compte_triangles/examples/R_brute.py
+
+{{ macros_info }}
+
+<iframe src="https://console.basthon.fr/?from=https://ens-fr.gitlab.io/enumeration/1.Compte_triangles/examples/R_brute.py" width="1000" height="500"></iframe>
 
 
 Pour un rectangle, on considère $A$ le coin supérieur gauche, et $B$ l'inférieur droit.
