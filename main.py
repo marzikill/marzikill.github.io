@@ -3,7 +3,7 @@ def define_env(env):
 
   @env.macro
   def basthon(exo: str, hauteur: int):
-      return f"""<iframe src="https://console.basthon.fr/?from={{ io_url }}{{ page.url }}../{exo}" width="2500" height="f{hauteur}"></iframe>"""
+      return f"""<iframe src="https://console.basthon.fr/?from={{ io_url }}{{ page.url }}{exo}" width=100% height="f{hauteur}"></iframe>"""
 
   @env.macro
   def script(lang: str, nom: str):

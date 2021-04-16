@@ -27,8 +27,12 @@ On compte tous les triangles équilatéraux dessinés.
     === "Cas général"
         À vous de trouver !
 
-!!! Abstract "Au programme"
-    Ce problème sera résolu de manière progressive, et c'est l'occasion d'utiliser :
+## Au programme
+
+Quand un problème semble difficile, on en invente un qui y ressemble, en plus simple. Et on essaie de le résoudre. Nous commencerons ainsi.
+
+!!! Abstract
+    Ce problème sera ensuite résolu de manière progressive, et c'est l'occasion d'utiliser :
 
     - des méthodes par force brute ;
     - des méthodes par récurrence ;
@@ -97,8 +101,6 @@ On a aussi, avec une récurrence sur $m$, et un peu de travail :
 
 
 On peut alors vérifier :
-
-{{ io_url }}{{ page.url }}../scripts/R_semi_brute.py
 
 {{ basthon('scripts/R_semi_brute.py', 800) }}
 
