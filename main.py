@@ -16,7 +16,7 @@ def define_env(env):
     def script(lang: str, nom: str) -> str:
         "Renvoie le script dans une balise bloc avec langage spécifié"
         return f"""```{lang}
---8<--- "docs/{env.variables.page.url}../{nom}"
+--8<---  "docs/""" + os.path.dirname(env.variables.page.url.rstrip('/')) + f"""/{nom}"
 ```"""
 
     @env.macro

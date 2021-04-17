@@ -84,22 +84,30 @@ Auteur : Franck CHAMBON
 
 ### Premières valeurs
 
-1. $a_n$ pour $n<4$
-    - $a_0 = 1$, il y a une unique façon de paver le vide ;
-    - $a_1 = 1$, une barre verticale ;
-    - $a_2 = 2$, deux barres verticales, ou bien deux carrés ;
-    - $a_3 = 3$, trois barres verticales, ou bien deux carrés flanqués d'une barre verticale (à gauche ou à droite).
+!!! question "Trouver les premières valeurs et justifier"
 
-2. $b_n$ pour $n<2$
-    - $b_0 = 1$, un carré ;
-    - $b_1 = 1$, un carré et une barre verticale ;
+    - $a_0$, $a_1$, $a_2$, $a_3$.
+    - $b_0$, $b_1$. On calculera ensuite les autres...
+    - $c_0$, $c_1$, $c_2$, $c_3$.
 
-3. $c_n$ pour $n<4$
-Pour $n<4$, on ne peut rien mettre d'autre qu'un carré à droite, et alors on a $c_n=a_n$ pour $n<4$.
-    - $c_0 = 1$ ;
-    - $c_1 = 1$ ;
-    - $c_2 = 2$ ;
-    - $c_3 = 3$ ;
+??? example "Réponses"
+    
+    1. $a_n$ pour $n<4$
+        - $a_0 = 1$, il y a une unique façon de paver le vide ;
+        - $a_1 = 1$, une barre verticale ;
+        - $a_2 = 2$, deux barres verticales, ou bien deux carrés ;
+        - $a_3 = 3$, trois barres verticales, ou bien deux carrés flanqués d'une barre verticale (à gauche ou à droite).
+
+    2. $b_n$ pour $n<2$
+        - $b_0 = 1$, un carré ;
+        - $b_1 = 1$, un carré et une barre verticale ;
+
+    3. $c_n$ pour $n<4$
+    Pour $n<4$, on ne peut rien mettre d'autre qu'un carré à droite, et alors on a $c_n=a_n$ pour $n<4$.
+        - $c_0 = 1$ ;
+        - $c_1 = 1$ ;
+        - $c_2 = 2$ ;
+        - $c_3 = 3$ ;
 
 ### Récurrence pour a_n
 
@@ -152,7 +160,10 @@ Dans ce cas, il y a $b_{n-4}$ façons de paver ce qu'il reste.
 
 ---
 
-!!! done "Bilan"
+!!! faq "Quel bilan ?"
+    Donner une relation de récurrence pour $(a_n)$, pour $n\geqslant 4$.
+
+??? done "Réponse"
     Pour $n\geqslant 4$, on a $a_n = a_{n-1} + a_{n-4} + a_{n-2} + 2b_{n-4} + c_{n-4}$
 
 ### Récurrence pour b_n
@@ -175,8 +186,10 @@ Il y a plusieurs cas de motifs pour la partie droite d'un pavage de rectangle $4
 Dans ce cas, il y a $b_{n-2}$ façons de paver ce qu'il reste.
 
 ---
+!!! faq "Quel bilan ?"
+    Donner une relation de récurrence pour $(b_n)$, pour $n\geqslant 2$.
 
-!!! done "Bilan"
+??? done "Réponse"
     Pour $n\geqslant 2$, on a $b_n = b_{n-2} + a_{n}$
 
 
@@ -199,7 +212,10 @@ Dans ce cas, il y a $c_{n-4}$ façons de paver ce qu'il reste.
 
 ---
 
-!!! done "Bilan"
+!!! faq "Quel bilan ?"
+    Donner une relation de récurrence pour $(c_n)$, pour $n\geqslant 4$.
+
+??? done "Réponse"
     Pour $n\geqslant 4$, on a $c_n = c_{n-4} + a_{n}$
 
 ## Calcul des valeurs suivantes
@@ -229,6 +245,9 @@ for n in range(4, 24):
 {{ table_a() }}
 
 
+!!! tip "Résultat"
+    On déduit que dans l'exemple d'introduction, il y avait $143$ façons de paver le rectangle $4×8$, avec des rectangles d'aire $4$.
+
 ### Relation d'ordre 8 pour a_n
 
 #### D'après OEIS<sup>®</sup>
@@ -238,14 +257,14 @@ Sur [*On-Line Encyclopedia of Integer Sequences*](oeis.org), cette suite est ré
 
 On peut vérifier cette relation sur nos valeurs :
 
-```python
+```python linenums="10"
 for n in range(8, 24):
     assert  -a[n-8] +a[n-6] -a[n-5] +5*a[n-4] +a[n-2] +a[n-1] == a[n], f"Avec {n}"
-print("Réussite au tests")
 ```
 
 !!! tip "Remarque"
-    Pour une suite qui ne serait pas référencée, [l'algorithme de Berlekamp–Massey (*en*)](https://en.wikipedia.org/wiki/Berlekamp%E2%80%93Massey_algorithm) permet de déterminer une relation de récurrence en fonction des premiers termes.
+    Pour une suite qui ne serait pas référencée, sur OEIS
+    : [l'algorithme de Berlekamp–Massey (*en*)](https://en.wikipedia.org/wiki/Berlekamp%E2%80%93Massey_algorithm) permet de déterminer une relation de récurrence en fonction des premiers termes.
 
 #### Preuve de cette relation de récurrence
 
@@ -273,7 +292,9 @@ Par soustraction de $(II)$ par $(III)$, on obtient pour $n\geqslant 8$ :
 ### Calculs successifs des premiers termes
 
 On ajoute à la liste des valeurs initiales les nouvelles valeurs avec la relation de récurrence.
-> Dans notre exemple la valeur suivante est environ le double de la précédente, donc nécessite environ un bit de plus en moyenne. Le stockage de $200\,000$ valeurs prend donc une place mémoire de plus de $20$ milliards de bits ; environ $3$ Go.
+
+!!! warning "Estimation de l'empreinte mémoire"
+    Dans notre exemple, la valeur suivante est environ le double de la précédente, donc nécessite environ un bit de plus en moyenne. Le stockage de $200\,000$ valeurs prend donc une place mémoire de plus de $20$ milliards de bits ; environ $3$ Go.
 
 
 {{ script('python', 'scripts/chrono_1.py') }}
@@ -286,15 +307,16 @@ Preuve de calcul : 626139179
 
 
 
-- C'est la bonne méthode à employer si on a besoin de (*presque*) tous les premiers termes d'une suite récurrente linéaire.
+- C'est **la bonne méthode** à employer ==si== on a besoin de (*presque*) tous les premiers termes d'une suite récurrente linéaire.
 - La dernière instruction affiche le dernier terme calculé, qui est réellement très grand, modulo un grand nombre premier sur 32bits. Cette *preuve* de calcul a plusieurs utilités :
     - elle initie au calcul modulaire omniprésent en cryptographie,
     - elle permet de vérifier plus aisément des calculs sur de grands nombres par différentes méthodes,
     - ou par différents langages qui ne travaillent pas avec des nombres plus grands que les mots machine.
 
-> Sans stocker toutes les valeurs, juste les huit précédentes, peut-on calculer beaucoup plus de termes ?
->
-> - Il suffit de supprimer, avec `del a[0]`, le terme qui devient inutile à chaque tour de boucle. Cette opération permet de conserver une empreinte mémoire faible, donc d'utiliser de la mémoire cache qui est plus rapide que la RAM !!!
+!!! faq "Comment faire mieux ?"
+    Sans stocker toutes les valeurs, juste les huit précédentes, peut-on calculer beaucoup plus de termes ?
+
+    Il suffit de supprimer, avec `del a[0]`, le terme qui devient inutile à chaque tour de boucle. Cette opération permet de conserver une empreinte mémoire faible, donc d'utiliser de la mémoire cache qui est plus rapide que la RAM !!!
 
 {{ script('python', 'scripts/chrono_2.py') }}
 
@@ -307,7 +329,9 @@ Preuve de calcul : 626139179
 C'est à peine plus rapide, mais l'empreinte mémoire est bien plus faible.
 
 
-Dans un fichier `outils.py` (que nous donnerons à la fin), créons une fonction `rec_lin_suc` qui renvoie un terme d'une suite récurrente linéaire par calcul des termes successifs.
+Dans un fichier `outils.py` (que nous donnerons à la fin[^1]), créons une fonction `rec_lin_suc` qui renvoie un terme d'une suite récurrente linéaire par calcul des termes successifs. C'est uniquement pour être plus commode à réutiliser, et améliorer légèrement les performances, ce code étant semi-interprété au lieu de l'être totalement.
+
+[^1]: Ce script mérite une belle discussion.
 
 Utilisation :
 
@@ -318,7 +342,7 @@ Durée : 12.29 s
 Preuve de calcul : 626139179
 ```
 
-!!! faq "Question"
+!!! faq "Faire mieux ?"
     Peut-on calculer un terme lointain plus rapidement avec une autre méthode ?
 
     - Oui, avec l'exponentiation rapide de matrices.
@@ -328,6 +352,7 @@ Preuve de calcul : 626139179
 ### Calcul matriciel d'un terme lointain
 
 Dans le code précédent, les deux instructions :
+
 ```python
 a.append(sum(ai * ri for ai, ri in zip(a, r)))
 del a[0]
@@ -370,7 +395,8 @@ De sorte que l'on peut calculer plus rapidement $a_n$ avec l'exponentiation rapi
     - l'empreinte mémoire est en $\Theta(d^2)$ coefficients (pas bits) ;
     - **Attention**, les coefficients peuvent être de grands nombres, et donc le temps de calcul peut ne pas être en $\Theta(d^3 \log n)$...
 
-> Comparons avec notre exemple et un code non optimisé inclus dans notre petit module `outils.py`.
+!!! tip "Concrètement"
+    Comparons avec notre exemple et avec un code non optimisé inclus dans notre petit module `outils.py` (que nous donnons en annexe).
 
 {{ script('python', 'scripts/chrono_4.py') }}
 
@@ -379,7 +405,8 @@ Durée : 2.12 s
 Preuve de calcul : 626139179
 ```
 
-> On peut faire mieux en travaillant avec des polynômes.
+!!! done "Encore mieux ?"
+    On peut faire mieux en travaillant avec des polynômes.
 
 
 
@@ -447,8 +474,9 @@ Plusieurs problèmes de pavages sont indiqués en suivant ce lien : [M5TILE](htt
     L'énoncé est en anglais. Dans le tableau suivant, édité en mars 2020,
 
     - *Solvers* indique une forme de difficulté ; le nombre de participants qui ont résolu le problème. Attention, beaucoup de participants utilisent le langage C.
-    - Le temps indique un temps personnel (le mien, en Python3) avec un code optimisé. C'est souvent le temps à battre.
-    - Un titre en gras indique un problème particulièrement difficile en Python3 ; une première résolution en C étant conseillée. Py3Solvers indique le nombre de personnes ayant réussi avec Python3.
+    - Le temps (*Time*) indique un temps personnel (le mien, en Python3) avec un code optimisé. **C'est souvent le temps à battre.**
+    - Un titre en gras indique un problème particulièrement difficile en Python3 ; une première résolution en C étant conseillée.
+    - *Py3Solvers* indique le nombre de personnes ayant réussi avec Python3.
     - Un symbole :fontawesome-solid-home: indique un problème créé par votre serviteur.
 
 |Title|Solvers|Time|Py3Solvers|
@@ -488,7 +516,7 @@ Des problèmes difficiles sur les suites, en général.
 
 Et voici d'autres [problèmes](https://www.spoj.com/problems/FRANCKY/) essentiellement d'arithmétique. Des problèmes qui m'ont personnellement fait grandement progresser à la fois en mathématiques, et en informatique.
 
-!!! danger "Quelques nouveaux problèmes ; :warning: impossible avec Python."
+!!! danger "Problèmes récents ; :warning: impossible avec Python."
     - [MOON4](https://www.spoj.com/problems/MOON4/)
     - [SPP3](https://www.spoj.com/problems/SPP3/)
 
