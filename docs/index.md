@@ -5,18 +5,31 @@
 - Plusieurs méthodes sont proposées, avec toujours un code en *Python*. Les bonnes pratiques de programmation sont mises en avant, avec, en particulier, une première approche par force brute.
 - Les méthodes avancées nécessitent des connaissances en algèbre linéaire ou en arithmétique, et sont destinées au public d'enseignants de mathématiques, ou d'étudiants.
 
+## Triangles dans une figure
 
-## test 0
+On cherche le moyen de compter le nombre de triangles dans une figure construite selon un certain motif. L'occasion de travailler avec des polynômes.
 
+[Triangles dans une figure](1.triangles/triangles.md){ .md-button }
 
-- {{config.site_name}}
-- {{config.site_url}}
-- {{config.site_author}}
-- {{config.site_description}}
-- {{config.extra_javascript}}
-- {{config.extra_css}}
-- {{config.repo_url}}
-- {{config.repo_name}}
-- {{config.copyright}}
-- {{config.google_analytics}}
+Quelques exercices sont proposés, dont certains interactifs.
+
+## Pavages de rectangle
+
+On cherche **les** moyens de déterminer un terme lointain dans une suite récurrente linéaire, après l'avoir déterminée.
+
+[Pavages d'un rectangle](2.pavages/pavages.md){ .md-button }
+
+De nombreux exercices faciles à très difficiles sont proposés.
+
+## Mur en brique
+
+À venir...
+
+[Mur en brique sans fissure](3.mur_brique/mur_brique.md){ .md-button }
+
+## Quantité de nombres premiers
+
+À venir...
+
+[Nombreux algorithmes en arithmétique](4.arith/arith.md){ .md-button }
 
