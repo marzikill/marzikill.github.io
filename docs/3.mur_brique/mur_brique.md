@@ -13,7 +13,7 @@ Auteur : Franck CHAMBON
 !!! note "Nombre élégant"
     Un nombre est dit *élégant* quand l'écart entre deux chiffres consécutifs est d’au plus $1$. 
     
-    Par exemple, $123323454$ est *élégant*, et $12354$ ne l’est pas.
+    Par exemple, $10122344$ est *élégant*, et $13234$ ne l’est pas.
 
 !!! faq "Combien y a-t-il de nombres *élégants* de $8$ chiffres ?"
     
