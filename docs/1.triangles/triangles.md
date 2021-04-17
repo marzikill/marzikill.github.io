@@ -67,10 +67,10 @@ On compte tous les rectangles dessinés.
 
 ### Résolution par force brute
 
-{{ script('python', 'scripts/R_brute.py') }}
+{{ py('R_brute') }}
 
 
-```
+``` python
 >>> R_brute(6, 10)
 1155
 ```
@@ -245,9 +245,9 @@ def force_brute(n):
 print([force_brute(n) for n in range(10)])
 ```
 
-Résultat :
+Sortie :
 
-``` python
+```bash
 [0, 1, 5, 13, 27, 48, 78, 118, 170, 235]
 ```
 

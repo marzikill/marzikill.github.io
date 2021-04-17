@@ -252,7 +252,7 @@ for n in range(4, 24):
 
 #### D'après OEIS<sup>®</sup>
 
-Sur [*On-Line Encyclopedia of Integer Sequences*](oeis.org), cette suite est référencée sous [A220123](http://oeis.org/A220123). On y découvre une autre relation de récurrence :
+Sur [*On-Line Encyclopedia of Integer Sequences*](http://oeis.org), cette suite est référencée sous [A220123](http://oeis.org/A220123). On y découvre une autre relation de récurrence :
 > Pour $n\geqslant8$, on a : $-a_{n-8}+a_{n-6}-a_{n-5}+5a_{n-4}+a_{n-2}+a_{n-1} = a_{n}$
 
 On peut vérifier cette relation sur nos valeurs :
@@ -297,7 +297,7 @@ On ajoute à la liste des valeurs initiales les nouvelles valeurs avec la relati
     Dans notre exemple, la valeur suivante est environ le double de la précédente, donc nécessite environ un bit de plus en moyenne. Le stockage de $200\,000$ valeurs prend donc une place mémoire de plus de $20$ milliards de bits ; environ $3$ Go.
 
 
-{{ script('python', 'scripts/chrono_1.py') }}
+{{ py('chrono_1') }}
 
 ```
 Durée : 13.51 s
@@ -318,7 +318,7 @@ Preuve de calcul : 626139179
 
     Il suffit de supprimer, avec `del a[0]`, le terme qui devient inutile à chaque tour de boucle. Cette opération permet de conserver une empreinte mémoire faible, donc d'utiliser de la mémoire cache qui est plus rapide que la RAM !!!
 
-{{ script('python', 'scripts/chrono_2.py') }}
+{{ py('chrono_2') }}
 
 ```
 Durée : 12.23 s
@@ -335,7 +335,7 @@ Dans un fichier `outils.py` (que nous donnerons à la fin[^1]), créons une fonc
 
 Utilisation :
 
-{{ script('python', 'scripts/chrono_3.py') }}
+{{ py('chrono_3') }}
 
 ```
 Durée : 12.29 s
@@ -398,7 +398,7 @@ De sorte que l'on peut calculer plus rapidement $a_n$ avec l'exponentiation rapi
 !!! tip "Concrètement"
     Comparons avec notre exemple et avec un code non optimisé inclus dans notre petit module `outils.py` (que nous donnons en annexe).
 
-{{ script('python', 'scripts/chrono_4.py') }}
+{{ py('chrono_4') }}
 
 ```
 Durée : 2.12 s
@@ -429,7 +429,7 @@ Mieux encore, on peut se passer totalement de la matrice $M$.
 
     On a : $a_n = a_0\times q_0 + a_1\times q_1 + \cdots + a_{d-1}\times q_{d-1}$
 
-{{ script('python', 'scripts/chrono_5.py') }}
+{{ py('chrono_5') }}
 
 ```
 Durée : 0.26 s
@@ -522,5 +522,5 @@ Et voici d'autres [problèmes](https://www.spoj.com/problems/FRANCKY/) essentiel
 
 ## ANNEXE : `fichier outils.py`
 
-{{ script('python', 'scripts/outils.py') }}
+{{ py('outils') }}
 

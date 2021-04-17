@@ -20,6 +20,11 @@ def define_env(env):
 ```"""
 
     @env.macro
+    def py(nom: str) -> str:
+        "macro python rapide"
+        return script('python', "scripts/" + nom + ".py")
+
+    @env.macro
     def html_fig(num: int) -> str:
         "Renvoie le code HTML de la figure n° `num`"
         return f'--8<-- "docs/' + os.path.dirname(env.variables.page.url.rstrip('/')) + f'/figures/fig_{num}.html"'

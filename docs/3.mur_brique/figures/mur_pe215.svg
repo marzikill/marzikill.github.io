@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+     width="500" height="200" viewBox="0 -200 500 200">
+<defs>
+</defs>
+<rect x="10" y="-58" width="148" height="48" fill="red" stroke-width="8" stroke="black" />
+<rect x="160" y="-58" width="148" height="48" fill="red" stroke-width="8" stroke="black" />
+<rect x="310" y="-58" width="148" height="48" fill="red" stroke-width="8" stroke="black" />
+<rect x="10" y="-108" width="98" height="48" fill="red" stroke-width="8" stroke="black" />
+<rect x="110" y="-108" width="98" height="48" fill="red" stroke-width="8" stroke="black" />
+<rect x="210" y="-108" width="148" height="48" fill="red" stroke-width="8" stroke="black" />
+<rect x="360" y="-108" width="98" height="48" fill="red" stroke-width="8" stroke="black" />
+<rect x="10" y="-158" width="148" height="48" fill="red" stroke-width="8" stroke="black" />
+<rect x="160" y="-158" width="98" height="48" fill="red" stroke-width="8" stroke="black" />
+<rect x="260" y="-158" width="98" height="48" fill="red" stroke-width="8" stroke="black" />
+<rect x="360" y="-158" width="98" height="48" fill="red" stroke-width="8" stroke="black" />
+<rect x="359" y="-158" width="1" height="98" stroke-width="1" stroke="yellow" />
+</svg>

@@ -4,7 +4,9 @@ nav:
   - 'Énumération': 'index.md'
   - 'nb triangles': '1.triangles/triangles.md'
   - 'nb pavages': '2.pavages/pavages.md'
-
+  - 'nb murs en brique': '3.mur_brique/mur_brique.md'
+  - 'nb premiers': '4.arith/arith.md'
+  
 theme:
   name: material
   font: false
