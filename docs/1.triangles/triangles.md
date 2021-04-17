@@ -53,13 +53,13 @@ On compte tous les rectangles dessinés.
 
 
 ??? tip "Indices"
-    === "Pour $n=1$ et $m=1$"
+    === "Cas $n=1$ et $m=1$"
         Il y en a $1$.
 
-    === "Pour $n=2$ et $m=2$"
+    === "Cas $n=2$ et $m=2$"
         Réponse $9$.
 
-    === "Pour $n=6$ et $m=10$"
+    === "Cas $n=6$ et $m=10$"
         Réponse $1155$.
 
     === "Cas général"
@@ -299,7 +299,7 @@ On peut la réécrire aussi en termes de [*rising factorials*](https://en.wikipe
 !!! warning "Attention"
     Bien saisir la définition des *rising factorials*, avec par exemple :
 
-$$n^{\overline3} = n(n+1)(n+2)$$
+    $n^{\overline3} = n(n+1)(n+2)$
 
 Une telle formule se prête bien aussi à une méthode d'évaluation proche de celle [Ruffini-Horner](https://fr.wikipedia.org/wiki/M%C3%A9thode_de_Ruffini-Horner).
 

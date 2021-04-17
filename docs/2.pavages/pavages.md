@@ -1,4 +1,4 @@
-# Pavages d'un rectangle 4×n par des rectangles d'aire 4 {ignore = true}
+# Pavages d'un rectangle 4×n par des rectangles d'aire 4
 
 Auteur : Franck CHAMBON
 
@@ -91,19 +91,22 @@ Auteur : Franck CHAMBON
     - $c_0$, $c_1$, $c_2$, $c_3$.
 
 ??? example "Réponses"
+    === "Suite"
+        Réponse.
     
-    1. $a_n$ pour $n<4$
+    === "$a_n$ pour $n<4$"
         - $a_0 = 1$, il y a une unique façon de paver le vide ;
         - $a_1 = 1$, une barre verticale ;
         - $a_2 = 2$, deux barres verticales, ou bien deux carrés ;
         - $a_3 = 3$, trois barres verticales, ou bien deux carrés flanqués d'une barre verticale (à gauche ou à droite).
 
-    2. $b_n$ pour $n<2$
+    === "$b_n$ pour $n<2$"
         - $b_0 = 1$, un carré ;
         - $b_1 = 1$, un carré et une barre verticale ;
 
-    3. $c_n$ pour $n<4$
-    Pour $n<4$, on ne peut rien mettre d'autre qu'un carré à droite, et alors on a $c_n=a_n$ pour $n<4$.
+    === "$c_n$ pour $n<4$"
+        Pour $n<4$, on ne peut rien mettre d'autre qu'un carré à droite, et alors on a $c_n=a_n$ pour $n<4$.
+
         - $c_0 = 1$ ;
         - $c_1 = 1$ ;
         - $c_2 = 2$ ;
@@ -316,7 +319,7 @@ Preuve de calcul : 626139179
 !!! faq "Comment faire mieux ?"
     Sans stocker toutes les valeurs, juste les huit précédentes, peut-on calculer beaucoup plus de termes ?
 
-    Il suffit de supprimer, avec `del a[0]`, le terme qui devient inutile à chaque tour de boucle. Cette opération permet de conserver une empreinte mémoire faible, donc d'utiliser de la mémoire cache qui est plus rapide que la RAM !!!
+    Il suffit de supprimer, avec `del a[0]`, le terme qui devient inutile à chaque tour de boucle. Cette opération permet de conserver une empreinte mémoire faible, donc de n'utiliser que de la mémoire cache qui est bien plus rapide que la RAM !!!
 
 {{ py('chrono_2') }}
 
