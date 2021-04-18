@@ -23,9 +23,11 @@ De nombreux exercices faciles à très difficiles sont proposés.
 
 ## Mur en brique
 
-À venir...
+On calcule le nombre de chemins dans un grand graphe creux.
 
 [Mur en brique sans fissure](3.mur_brique/mur_brique.md){ .md-button }
+
+Plusieurs modélisations sont proposées, de la programmation dynamique est utilisée pour construire le graphe de manière efficace. On utilisera avec bon escient les dictionnaires.
 
 ## Quantité de nombres premiers
 
