@@ -1,5 +1,7 @@
 site_name: Énumération
 
+# ceci est un commentaire
+
 nav:
   - 'Énumération': 'index.md'
   - 'nb triangles': '1.triangles/triangles.md'

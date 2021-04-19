@@ -313,8 +313,6 @@ Un peu d'introspection nous conduit à voir que :
     - la modélisation des rangées selon `100101010`
     - une modélisation plus compacte encore !
 
-
-
 ### Construction de tous les murs de hauteur 2
 
 Il y a plusieurs façons de choisir un motif générique pour construire par récurrence tous les murs de hauteur 2, cela nous donnera directement tous les sommets connectés et toutes les arêtes de notre graphe.
