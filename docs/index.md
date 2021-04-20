@@ -17,11 +17,11 @@
 
     On cherche **les** moyens de déterminer un terme lointain dans une suite récurrente linéaire, après l'avoir déterminée.
 
-    [Pavages d'un rectangle](2.pavages/pavages.md){ .md-button }
+    [Pavages de rectangle](2.pavages/pavages.md){ .md-button }
 
     De nombreux exercices faciles à très difficiles sont proposés.
 
-!!! abstract "Mur en brique"
+!!! abstract "Mur en brique sans fissure"
 
     On calcule le nombre de chemins dans un grand graphe creux.
 
@@ -31,7 +31,7 @@
 
 !!! abstract "Quantité de nombres premiers"
 
-    À venir...
+    Nombreux algorithmes en arithmétique
 
-    [Nombreux algorithmes en arithmétique](4.arith/arith.md){ .md-button }
+    [Quantité de nombres premiers](4.arith/arith.md){ .md-button }
 
