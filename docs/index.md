@@ -33,7 +33,7 @@
 
     On présente, et on discute, différents algorithmes de difficulté croissante :
 
-    - des tests de primalités élémentaires ;
+    - des tests de primalité élémentaires ;
     - le crible d'Ératosthène ;
     - la méthode de Meissel-Lehmer, expliquée avec de la programmation dynamique
 
