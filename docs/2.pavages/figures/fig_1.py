@@ -9,5 +9,7 @@ grid[1:3, 3:5] = colors['DarkRed']
 grid[0:2, 6:8] = colors['Red']
 grid[2:4, 6:8] = colors['DarkRed']
 
-with open("fig_1.html", 'w') as f:
-    f.write(grid._repr_html_())
+#with open("fig_1.html", 'w') as f:
+#    f.write(grid._repr_html_())
+
+grid.save_image('intro.png')

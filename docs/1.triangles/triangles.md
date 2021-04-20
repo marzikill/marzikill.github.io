@@ -62,9 +62,6 @@ On compte tous les rectangles dessinés.
     === "Cas $n=6$ et $m=10$"
         Réponse $1155$.
 
-    === "Cas général"
-        À vous de trouver !
-
 ### Résolution par force brute
 
 {{ py('R_brute') }}
@@ -242,15 +239,9 @@ def force_brute(n):
 ### Premières valeurs
 
 ```python
-print([force_brute(n) for n in range(10)])
-```
-
-Sortie :
-
-```bash
+>>> [force_brute(n) for n in range(10)]
 [0, 1, 5, 13, 27, 48, 78, 118, 170, 235]
 ```
-
 
 On peut parfois calculer par `force_brute` les premiers résultats d'un problème.
 
@@ -290,11 +281,11 @@ Il est très facile de trouver une formule pour $\Delta_n$, un peu plus délicat
 
 On peut certes obtenir deux formules polynomiales (deux proches, suivant la parité de $n$) pour exprimer $a_n$, il faut cependant penser à utiliser une autre base que la base canonique des polynômes ; celle des coefficients binomiaux se prête naturellement bien à la sommation ! On a, **après calculs** :
 
-> $a_n = \dfrac{12\binom{n+2}3 - 2\binom{n+1}2 - \binom{n}1 - 2\cdot\chi_\text{impair}(n)}{8}$
+$$a_n = \dfrac{12\binom{n+2}3 - 2\binom{n+1}2 - \binom{n}1 - 2\cdot\chi_\text{impair}(n)}{8}$$
 
 On peut la réécrire aussi en termes de [*rising factorials*](https://en.wikipedia.org/wiki/Falling_and_rising_factorials),
 
-> $a_n = \dfrac{2n^{\overline3} - n^{\overline2} - n^{\overline1} - 2\cdot\chi_\text{impair}(n)}{8}$
+$$a_n = \dfrac{2n^{\overline3} - n^{\overline2} - n^{\overline1} - 2\cdot\chi_\text{impair}(n)}{8}$$
 
 !!! warning "Attention"
     Bien saisir la définition des *rising factorials*, avec par exemple :
@@ -304,7 +295,7 @@ On peut la réécrire aussi en termes de [*rising factorials*](https://en.wikipe
 Une telle formule se prête bien aussi à une méthode d'évaluation proche de celle [Ruffini-Horner](https://fr.wikipedia.org/wiki/M%C3%A9thode_de_Ruffini-Horner).
 
 
-!!! warning "Attention"
+!!! tip "Exercice"
     Un exercice est inclus dans le script ci-dessous.
 
 {{ basthon('scripts/R_efficace.py', 800) }}
@@ -353,15 +344,15 @@ Lien pour tester votre réponse : [Counting Triangles III](http://www.spoj.com/p
     === "_Problème_"
         Vous pouvez obtenir la réponse, mais avez-vous bien cherché avant ?
 
-    === "Triangle ; $n=6$"
+    === "Triangle ($n=6$)"
         Il y a $78$ triangles.
 
-    === "Rectangle ; $n=6$ et $m=10$"
+    === "Rectangle ($n=6$ et $m=10$)"
         Il y a $1155$ rectangles.
     
-    === "Hexagone ; $n=5$"
+    === "Hexagone ($n=5$)"
         Il y a $496$ triangles.
 
-    === "Hexagone étoilé ; $n=3$"
+    === "Hexagone étoilé ($n=3$)"
         Il y a $354$ triangles.
 

@@ -2,24 +2,15 @@
 
 Auteur : Franck CHAMBON
 
-!!! info "Info MkDocs pour les profs de NSI"
-    cette figure est créée avec `ipythonblocs`, c'est du pur HTML et le code est ici inclus :sunglasses:  
-    **Avec une macro, sans passer par un fichier temporaire.**
-
-{{ pv_intro() }}
-
-
 !!! abstract "Description du problème"
+    ![pavage](figures/intro.png){ align=right width=400 }
+
     Un rectangle est à côté entier $4×n$.  
     On le pave avec des rectangles à côtés entiers.  
     Chaque petit rectangle est d'aire $4$.  
     Ci-dessus, un exemple de pavage d'un rectangle $4\times 8$.
 
-    [Combien y a-t-il de tels pavages ?](#){ .md-button }
-
-
-!!! tip "Notation"
-    On notera $a_n$ le nombre de pavages pour un rectangle $4\times n$.
+    [Combien y a-t-il de tels pavages ?](#calcul-des-valeurs-suivantes){ .md-button }
 
 !!! info "Les trois motifs"
     Ci-dessous, les rectangles d'aire $4$, à côtés entiers.
@@ -38,6 +29,10 @@ Auteur : Franck CHAMBON
         - par calcul successif ;
         - par calcul matriciel ;
         - par calcul polynomial.
+
+
+!!! tip "Notation"
+    On notera $a_n$ le nombre de pavages pour un rectangle $4\times n$.
 
 
 ## Problème simplifié
@@ -166,8 +161,8 @@ Dans ce cas, il y a $b_{n-4}$ façons de paver ce qu'il reste.
 !!! faq "Quel bilan ?"
     Donner une relation de récurrence pour $(a_n)$, pour $n\geqslant 4$.
 
-??? done "Réponse"
-    Pour $n\geqslant 4$, on a $a_n = a_{n-1} + a_{n-4} + a_{n-2} + 2b_{n-4} + c_{n-4}$
+    ??? done "Réponse"
+        Pour $n\geqslant 4$, on a $a_n = a_{n-1} + a_{n-4} + a_{n-2} + 2b_{n-4} + c_{n-4}$
 
 ### Récurrence pour b_n
 
@@ -192,8 +187,8 @@ Dans ce cas, il y a $b_{n-2}$ façons de paver ce qu'il reste.
 !!! faq "Quel bilan ?"
     Donner une relation de récurrence pour $(b_n)$, pour $n\geqslant 2$.
 
-??? done "Réponse"
-    Pour $n\geqslant 2$, on a $b_n = b_{n-2} + a_{n}$
+    ??? done "Réponse"
+        Pour $n\geqslant 2$, on a $b_n = b_{n-2} + a_{n}$
 
 
 ### Récurrence pour c_n
@@ -218,8 +213,8 @@ Dans ce cas, il y a $c_{n-4}$ façons de paver ce qu'il reste.
 !!! faq "Quel bilan ?"
     Donner une relation de récurrence pour $(c_n)$, pour $n\geqslant 4$.
 
-??? done "Réponse"
-    Pour $n\geqslant 4$, on a $c_n = c_{n-4} + a_{n}$
+    ??? done "Réponse"
+        Pour $n\geqslant 4$, on a $c_n = c_{n-4} + a_{n}$
 
 ## Calcul des valeurs suivantes
 
@@ -244,26 +239,26 @@ for n in range(4, 24):
 
 !!! check "Table des valeurs de $a_n$ pour $n < 24$."
 
-
 {{ table_a() }}
-
 
 !!! tip "Résultat"
     On déduit que dans l'exemple d'introduction, il y avait $143$ façons de paver le rectangle $4×8$, avec des rectangles d'aire $4$.
 
 ### Relation d'ordre 8 pour a_n
 
-#### D'après OEIS<sup>®</sup>
+!!! example "D'après OEIS<sup>®</sup>"
+    Sur [*On-Line Encyclopedia of Integer Sequences*](http://oeis.org), cette suite est référencée sous [A220123](http://oeis.org/A220123).
+    
+    On y découvre une autre relation de récurrence :
 
-Sur [*On-Line Encyclopedia of Integer Sequences*](http://oeis.org), cette suite est référencée sous [A220123](http://oeis.org/A220123). On y découvre une autre relation de récurrence :
-> Pour $n\geqslant8$, on a : $-a_{n-8}+a_{n-6}-a_{n-5}+5a_{n-4}+a_{n-2}+a_{n-1} = a_{n}$
+    Pour $n\geqslant8$, on a : $-a_{n-8}+a_{n-6}-a_{n-5}+5a_{n-4}+a_{n-2}+a_{n-1} = a_{n}$
 
-On peut vérifier cette relation sur nos valeurs :
+    On peut vérifier cette relation sur nos valeurs :
 
-```python linenums="10"
-for n in range(8, 24):
-    assert  -a[n-8] +a[n-6] -a[n-5] +5*a[n-4] +a[n-2] +a[n-1] == a[n], f"Avec {n}"
-```
+    ```python linenums="10"
+    for n in range(8, 24):
+        assert  -a[n-8] +a[n-6] -a[n-5] +5*a[n-4] +a[n-2] +a[n-1] == a[n], f"Avec {n}"
+    ```
 
 !!! tip "Remarque"
     Pour une suite qui ne serait pas référencée, sur OEIS
@@ -476,9 +471,12 @@ Plusieurs problèmes de pavages sont indiqués en suivant ce lien : [M5TILE](htt
 !!! info "Des problèmes variés, de pavage ou non"
     L'énoncé est en anglais. Dans le tableau suivant, édité en mars 2020,
 
-    - *Solvers* indique une forme de difficulté ; le nombre de participants qui ont résolu le problème. Attention, beaucoup de participants utilisent le langage C.
-    - Le temps (*Time*) indique un temps personnel (le mien, en Python3) avec un code optimisé. **C'est souvent le temps à battre.**
-    - Un titre en gras indique un problème particulièrement difficile en Python3 ; une première résolution en C étant conseillée.
+    - *Solvers* indique une forme de difficulté ; le nombre de participants qui ont résolu le problème.
+        - Attention, beaucoup de participants utilisent le langage C.
+    - Le temps (*Time*) indique un temps personnel (le mien, en Python3) avec un code optimisé.
+        - **C'est souvent le temps à battre.**
+    - Un titre en gras indique un problème particulièrement difficile en Python3.
+        - Une première résolution en C étant conseillée.
     - *Py3Solvers* indique le nombre de personnes ayant réussi avec Python3.
     - Un symbole :fontawesome-solid-home: indique un problème créé par votre serviteur.
 
@@ -519,7 +517,7 @@ Des problèmes difficiles sur les suites, en général.
 
 Et voici d'autres [problèmes](https://www.spoj.com/problems/FRANCKY/) essentiellement d'arithmétique. Des problèmes qui m'ont personnellement fait grandement progresser à la fois en mathématiques, et en informatique.
 
-!!! danger "Problèmes récents ; :warning: impossible avec Python."
+!!! danger "Problèmes récents :warning: impossible avec Python :warning:"
     - [MOON4](https://www.spoj.com/problems/MOON4/)
     - [SPP3](https://www.spoj.com/problems/SPP3/)
 
