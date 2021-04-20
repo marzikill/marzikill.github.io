@@ -31,7 +31,12 @@
 
 !!! abstract "Quantité de nombres premiers"
 
-    Nombreux algorithmes en arithmétique
+    On présente, et on discute, différents algorithmes de difficulté croissante :
+
+    - des tests de primalités élémentaires ;
+    - le crible d'Ératosthène ;
+    - la méthode de Meissel-Lehmer, expliquée avec de la programmation dynamique
 
     [Quantité de nombres premiers](4.arith/arith.md){ .md-button }
 
+    Deux problèmes sont donnés en exercice, qui permettent de mettre en application les méthodes.
