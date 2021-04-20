@@ -1,18 +1,15 @@
 # Énumération
 
 !!! tip "Quelques problèmes de dénombrement"
-    ![démo termtosvg](intro.svg){ align=right width=400 }
+    ![démo termtosvg](intro.svg){ align=right width=600 }
 
-    - Les énoncés sont simples, mais
-    - leur résolution fait intervenir des méthodes variées
-        - en mathématiques et
-        - en algorithmique.
-    - Plusieurs méthodes sont proposées, avec toujours un code en *Python*.
-        - Les bonnes pratiques de programmation sont mises en avant.
-    - Les méthodes avancées nécessitent des connaissances
-        - en algèbre linéaire ou
-        - en arithmétique, et
-        - sont destinées au public d'enseignants de mathématiques, ou d'étudiants.
+    !!! info "Les énoncés sont simples"
+        Leur résolution fait intervenir des méthodes variées en mathématiques et en algorithmique.
+
+        Plusieurs méthodes sont proposées, progressivement, avec un code en Python et les bonnes pratiques mises en avant.
+
+    !!! warning "Résolutions avancées"
+        Les méthodes avancées nécessitent des connaissances en algèbre linéaire ou en arithmétique, et sont destinées au public d'enseignants de mathématiques, ou d'étudiants.
 
 !!! abstract "Triangles dans une figure"
     ![triangles](1.triangles/figures/triangles.svg){ align=right width=200 }
