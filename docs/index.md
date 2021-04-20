@@ -1,6 +1,8 @@
 # Énumération
 
 !!! tip "Quelques problèmes de dénombrement"
+    ![démo termtosvg](intro.svg){ align=right width=400 }
+
     - Les énoncés sont simples, mais
     - leur résolution fait intervenir des méthodes variées
         - en mathématiques et
