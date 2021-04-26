@@ -8,6 +8,7 @@ nav:
   - 'nb pavages': '2.pavages/pavages.md'
   - 'nb murs en brique': '3.mur_brique/mur_brique.md'
   - 'nb premiers': '4.arith/arith.md'
+  - 'marche aléatoire': '5.marche_aléatoire/marche.md'
   
 theme:
   name: material

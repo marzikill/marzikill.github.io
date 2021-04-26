@@ -52,3 +52,9 @@
     Deux problèmes sont donnés en exercice :
     
     - ils permettent de mettre en application les méthodes.
+
+!!! abstract "Marche aléatoire sur $\mathbb Z^2$"
+
+    On présente un calcul d'espérance de sortie d'une zone.
+
+    [Marche aléatoire sur $\mathbb Z^2$](5.marche_aléatoire/marche_aléatoire.md){ .md-button }
