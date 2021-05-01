@@ -54,7 +54,7 @@
     - ils permettent de mettre en application les méthodes.
 
 !!! abstract "Marche aléatoire sur $\mathbb Z^2$"
-    ![marche](5.marche_aléatoire/output_3_0.png){ align=right width=300 }
+    ![marche](5.marche_aléatoire/output_3_0.png){ align=right width=450 }
 
     On présente un calcul d'espérance de sortie d'une zone.
 
