@@ -24,9 +24,11 @@
 !!! abstract "Au programme"
     Le contenu, dans une première partie, est accessible aux lycéens, la suite relève du supérieur.
 
-    - On commence par trouver une valeur approchée, en faisant une simulation.
-    - ...
-    - On détermine la valeur exacte. (Plus dur !)
+    - une approche statistique,
+    - une première approche probabiliste,
+    - une méthode étonnante pour deviner une valeur exacte,
+    - la construction d'un graphe, puis un peu d'algèbre,
+    - pour démontrer que la valeur exacte était la bonne.
 
 ## Une construction graphique
 

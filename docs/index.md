@@ -54,7 +54,16 @@
     - ils permettent de mettre en application les méthodes.
 
 !!! abstract "Marche aléatoire sur $\mathbb Z^2$"
+    ![marche](5.marche_aléatoire/output_3_0.png){ align=right width=300 }
 
     On présente un calcul d'espérance de sortie d'une zone.
 
-    [Marche aléatoire sur $\mathbb Z^2$](5.marche_aléatoire/marche_aléatoire.md){ .md-button }
+    [Marche aléatoire sur $\mathbb Z^2$](5.marche_aléatoire/marche.md){ .md-button }
+
+    Au programme :
+    
+    - une approche statistique,
+    - une première approche probabiliste,
+    - une méthode étonnante pour deviner une valeur exacte,
+    - la construction d'un graphe, puis un peu d'algèbre,
+    - pour démontrer que la valeur exacte était la bonne.

@@ -1,4 +1,11 @@
 site_name: Énumération
+site_url: https://ens-fr.gitlab.io/mkdocs
+repo_url: https://gitlab.com/ens-fr/mkdocs
+edit_uri: tree/master/docs/
+site_description: Tutoriel pour MkDocs Material
+copyright: |
+  Copyleft 🄯 2021 <a href="https://gitlab.com/ens-fr" target="_blank" rel="noopener">Franck CHAMBON</a>
+docs_dir: docs
 
 # ceci est un commentaire
 
@@ -9,87 +16,96 @@ nav:
   - 'nb murs en brique': '3.mur_brique/mur_brique.md'
   - 'nb premiers': '4.arith/arith.md'
   - 'marche aléatoire': '5.marche_aléatoire/marche.md'
-  
+
+
 theme:
-  name: material
-  font: false
-  language: fr
-  features:
-    - navigation.instant
-    - navigation.tabs
-    - navigation.expand
-    - navigation.top
-    - toc.integrate
-    - header.autohide
-
-  palette:
-    # Light mode
-    - media: "(prefers-color-scheme: light)"
-      scheme: default
-      primary: indigo
-      accent: indigo
-      toggle:
-        icon: material/toggle-switch-off-outline
-        name: Mode sombre
-
-    # Dark mode
-    - media: "(prefers-color-scheme: dark)"
-      scheme: slate
-      primary: blue
-      accent: blue
-      toggle:
-        icon: material/toggle-switch
-        name: Mode clair
+    name: material
+    font: false                     # RGPD ; pas de fonte Google
+    language: fr                    # français
+    palette:                        # Palettes de couleurs jour/nuit
+      - media: "(prefers-color-scheme: light)"
+        scheme: default
+        primary: indigo
+        accent: indigo
+        toggle:
+            icon: material/weather-sunny
+            name: Passer au mode nuit
+      - media: "(prefers-color-scheme: dark)"
+        scheme: slate
+        primary: blue
+        accent: blue
+        toggle:
+            icon: material/weather-night
+            name: Passer au mode jour
+    features:
+        - navigation.instant
+        - navigation.tabs
+        - navigation.expand
+        - navigation.top
+        - toc.integrate
+        - header.autohide
 
 
 markdown_extensions:
-  - meta
-  - abbr
-  - admonition
-  - def_list
-  - attr_list
-  - footnotes
-  - pymdownx.caret
-  - pymdownx.mark
-  - pymdownx.tilde
-  - pymdownx.snippets
-  - pymdownx.details
-  - pymdownx.highlight:
-      linenums: true
-  - pymdownx.tasklist:
-      custom_checkbox: false
-  - pymdownx.inlinehilite
-  - pymdownx.superfences:
-     custom_fences:
-        - name: mermaid
-          class: mermaid
-          format: !!python/name:pymdownx.superfences.fence_div_format
-  - pymdownx.keys
-  - pymdownx.tabbed
-  - pymdownx.betterem:
-      smart_enable: all
-  - pymdownx.emoji:
-      emoji_index: !!python/name:materialx.emoji.twemoji
-      emoji_generator: !!python/name:materialx.emoji.to_svg
-  - pymdownx.arithmatex:
-      generic: true
-  - toc:
-      permalink: ⚓︎
-      toc_depth: 3
+    - meta
+    - abbr
+
+    - def_list                      # Les listes de définition.
+    - attr_list                     # Un peu de CSS et des attributs HTML.
+    - footnotes                     # Notes[^1] de bas de page.  [^1]: ma note.
+    - admonition                    # Blocs colorés  !!! info "ma remarque"
+    - pymdownx.details              #   qui peuvent se plier/déplier.
+    - pymdownx.caret                # Passage ^^souligné^^ ou en ^exposant^.
+    - pymdownx.mark                 # Passage ==surligné==.
+    - pymdownx.tilde                # Passage ~~barré~~ ou en ~indice~.
+    - pymdownx.highlight            # Coloration syntaxique du code
+    - pymdownx.inlinehilite         # pour  `#!python  <python en ligne>`
+    - pymdownx.snippets             # Inclusion de fichiers externe.
+    - pymdownx.tasklist:            # Cases à cocher  - [ ]  et - [x]
+        custom_checkbox:    false   #   avec cases d'origine
+        clickable_checkbox: true    #   et cliquables.
+    - pymdownx.tabbed               # Volets glissants.  === "Mon volet"
+    - pymdownx.superfences          # Imbrication de blocs.
+    - pymdownx.keys:                # Touches du clavier.  ++ctrl+d++
+        separator: "\uff0b"
+    - pymdownx.emoji:               # Émojis  :boom:
+        emoji_index:     !!python/name:materialx.emoji.twemoji
+        emoji_generator: !!python/name:materialx.emoji.to_svg
+
+
+    - pymdownx.arithmatex:
+        generic: true
+    - toc:
+        permalink: ⚓︎
+        toc_depth: 3
+
+extra:
+    social:
+        - icon: fontawesome/brands/gitlab
+          link: https://gitlab.com/ens-fr
+          name: Enseignement en français
+
+        - icon: fontawesome/brands/discourse
+          link: https://mooc-forums.inria.fr/moocnsi/
+          name: Le forum des enseignants de NSI
+
+        - icon: fontawesome/brands/linux
+          link: https://linuxfr.org/
+          name: Promouvoir les Logiciels libres
+
+        - icon: fontawesome/brands/wikipedia-w
+          link: https://fr.wikipedia.org
+          name: L'encyclopédie libre que chacun peut améliorer
+
+        - icon: fontawesome/solid/paper-plane
+          link: mailto:franck.chambon@ac-aix-marseille.fr
+          name: Écrire à l'auteur
+    site_url: https://ens-fr.gitlab.io/mkdocs/
 
 
 plugins:
   - search
   - macros
-#  - markdownmermaid
-
-extra:
-  social:
-    - icon: fontawesome/solid/paper-plane
-      link: mailto:franck.chambon@ac-aix-marseille.fr
-      name: Écrire à l'auteur
-  raw_url: https://gitlab.com/ens-fr/enumeration/-/raw/master/docs/
-  io_url: https://ens-fr.gitlab.io/enumeration/
 
 extra_javascript:
   - javascripts/config.js
@@ -100,3 +116,5 @@ extra_javascript:
 
 extra_css:
   - stylesheets/extra.css
+
+
