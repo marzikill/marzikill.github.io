@@ -13,7 +13,7 @@
     <ul>
        {% for doc in doclist %}
             {% if doc.name contains '.md' or doc.name contains '.html' %}
-                <li><a href="{{ site.baseurl }}{{ doc.url }}">{{ doc.url | url_decode }} <br> {{ doc.name }}</a></li>
+                <li><a href="{{ site.baseurl }}{{ doc.url }}"> {{ doc.url | url_decode }} </a></li>
             {% endif %}
         {% endfor %}
     </ul>
