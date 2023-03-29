@@ -7,7 +7,7 @@
     \item En déduire le tableau de signe de $f$.
     \end{enumerate}
   \item Soit la fonction $g$ définie sur $\mathbb{R}$ par \\
-    \centerline{$g(x) = -x^2 + \dfrac{11}{2}x - 3$}
+    \centerline{$g(x) = -x^2 - \dfrac{11}{2}x + 3$}
     \begin{enumerate}[nosep]
     \item Montrer que $g(x) = \left( \dfrac{1}{2}x + 3 \right) (1 - 2 x)$.
     \item En déduire le tableau de signe de $g$. 

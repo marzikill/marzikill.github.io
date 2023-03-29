@@ -9,7 +9,7 @@
 
 2.  Soit la fonction $g$ définie sur $\mathbb{R}$ par\
 
-    $g(x) = -x^2 + \dfrac{11}{2}x - 3$
+    $g(x) = -x^2 - \dfrac{11}{2}x + 3$
 
     1.  Montrer que $g(x) = \left( \dfrac{1}{2}x + 3 \right) (1 - 2 x)$.
 
