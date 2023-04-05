@@ -1,10 +1,10 @@
-site_name: Énumération
-site_url: https://ens-fr.gitlab.io/mkdocs
-repo_url: https://gitlab.com/ens-fr/mkdocs
+site_name: Mathématiques et NSI
+site_url: https://marzikill.github.io/
+repo_url: https://github.com/marzikill/marzikill.github.io
 edit_uri: tree/master/docs/
-site_description: Tutoriel pour MkDocs Material
+site_description: Notes de cours
 copyright: |
-  Copyleft 🄯 2021 <a href="https://gitlab.com/ens-fr" target="_blank" rel="noopener">Franck CHAMBON</a>
+  Copyleft 🄯 2021 <a href="https://gitlab.com/ens-fr" target="_blank" rel="noopener">Florian Picard</a>
 docs_dir: docs
 
 # ceci est un commentaire
